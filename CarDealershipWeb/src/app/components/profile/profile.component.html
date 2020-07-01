@@ -1,0 +1,45 @@
+<div *ngIf = "show">
+    <h4>Profile</h4>
+    <p>{{this.person.firstName}} {{this.person.lastName}}</p>
+    <p>Username: {{this.person.userName}}</p>
+    <p>Email: {{this.person.email}}</p>
+    <p>Address:s {{this.person.address}}</p>
+</div>
+
+<div *ngIf = "!show">
+    <h4>Update</h4>
+
+    <form>
+        <div class = "form-group">
+            <label>First name</label>
+            <input [(ngModel)] = "firstName" placeholder = "{{this.firstName}}" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Last name</label>
+            <input [(ngModel)] = "lastName" placeholder = "{{this.lastName}}" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Username</label>
+            <input [(ngModel)] = "userName" placeholder = "{{this.userName}}" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Email</label>
+            <input [(ngModel)] = "email" placeholder = "{{this.email}}" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Address</label>
+            <input [(ngModel)] = "address" placeholder = "{{this.address}}" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <button (click) = "Submit()">Submit</button>
+            <p *ngIf = "invalid">{{result}}</p>
+        </div>
+    </form>
+</div>
+
+<button (click) = "Change()">{{info}}</button>

@@ -1,0 +1,4 @@
+<button (click) = Log()>{{this.field.loginoff}}</button>
+<button (click) = Create() *ngIf = "!this.field.login">Sign Up</button>
+<button (click) = Profile() *ngIf = "this.field.login">Profile</button>
+<button (click) = ViewCars() *ngIf = "this.field.login">View Cars</button>

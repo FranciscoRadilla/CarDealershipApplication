@@ -1,0 +1,47 @@
+<div class = "container">
+
+    <h4>Create a Account</h4>
+
+    <form>
+        <div class = "form-group">
+            <label>First name</label>
+            <input [(ngModel)] = "firstName" placeholder = "First Name" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Last name</label>
+            <input [(ngModel)] = "lastName" placeholder = "Last Name" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Username</label>
+            <input [(ngModel)] = "userName" placeholder = "User Name" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Email</label>
+            <input [(ngModel)] = "email" placeholder = "Email" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Address</label>
+            <input [(ngModel)] = "address" placeholder = "Address" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Password</label>
+            <input type="password" [(ngModel)] = "password" placeholder = "Password" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <label>Verify Password</label>
+            <input type="password" [(ngModel)] = "verpass" placeholder = "Verify Password" [ngModelOptions]="{standalone: true}">
+        </div>
+
+        <div class = "form-group">
+            <button (click) = "Submit()">Submit</button>
+            <p *ngIf = "invalid">{{result}}</p>
+        </div>
+    </form>
+
+</div>
